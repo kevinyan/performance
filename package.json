@@ -1,8 +1,7 @@
 {
   "name": "@keelvin/performance",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "keelvin 的包库",
-  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.config.js --mode production",
@@ -28,5 +27,14 @@
     "webpack-cli": "^3.2.3",
     "webpack-dev-middleware": "^3.6.1",
     "webpack-dev-server": "^3.2.1"
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinyan/performance.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kevinyan/performance/issues"
+  },
+  "homepage": "https://github.com/kevinyan/performance#readme"
 }
