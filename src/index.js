@@ -201,21 +201,21 @@ try {
             //页面id
             pageId: window.pageId || 'defualt',
             //白屏时间
-            whiteScreenTime: whiteScreenEndTime - startTime,
+            whiteScreenTime: window.whiteScreenEndTime - window.startTime,
             //首屏时间 有时候首屏取不到图片，就取domReady时间
-            firstScreenTime: (firstScreenEndTime || domReadyEndTime) - startTime,
+            firstScreenTime: (firstScreenEndTime || domReadyEndTime) - window.startTime,
             //用户可操作时间
-            domReadyTime: domReadyEndTime - startTime,
+            domReadyTime: domReadyEndTime - window.startTime,
             //页面总下载时间
-            onloadTime: onloadEndTime - startTime
+            onloadTime: onloadEndTime - window.startTime
         };
 
 
         if (window._hmt) {
-            _hmt.push(['_trackEvent', 'timing', 'whiteScreenTime', whiteScreenTime]);
-            _hmt.push(['_trackEvent', 'timing', 'firstScreenTime', firstScreenTime]);
-            _hmt.push(['_trackEvent', 'timing', 'domReadyTime', domReadyTime]);
-            _hmt.push(['_trackEvent', 'timing', 'onloadTime', onloadTime]);
+            _hmt.push(['_trackEvent', 'timing', 'whiteScreenTime', data.whiteScreenTime]);
+            _hmt.push(['_trackEvent', 'timing', 'firstScreenTime', data.firstScreenTime]);
+            _hmt.push(['_trackEvent', 'timing', 'domReadyTime', data.domReadyTime]);
+            _hmt.push(['_trackEvent', 'timing', 'onloadTime', data.onloadTime]);
         } else {
             console.log(data);
         }
