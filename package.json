@@ -1,7 +1,8 @@
 {
   "name": "@keelvin/performance",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "keelvin 的包库",
+  "main": "dist/app.bundle.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.config.js --mode production",

@@ -193,9 +193,8 @@ try {
             window.whiteScreenTime = performance.timing.responseEnd - performance.timing.fetchStart;
         }
 
-
-
-        let data = {
+        let data = {};
+        window.performance.data = data = {
             //统计类型
             type: 'performance',
             //页面id
@@ -239,4 +238,16 @@ try {
 
 } catch (e) {
     console.log(e);
+}
+
+export function getPerformanceData(callback) {
+    try {
+        setTimeout(() => {
+            callback(window.performance.data);
+        }, 1000);
+    } catch (e) {
+        console.log(e);
+    }
+
+    return;
 }

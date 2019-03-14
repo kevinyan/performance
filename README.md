@@ -1,4 +1,9 @@
 # Useage
+### Step1: 安装
+```
+npm i --save-dev @keelvin/performance
+```
+
 
 ### Setp1: head结束之前植入代码
 ```
@@ -10,26 +15,26 @@
 ```
 
 
-### Setp2: 引入```./dist``` 里的 ```app.bundle.js```
-
-
-### 最终看起来如下
+### Setp2: 入口处```import```
+ 
 
 ```
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>TEST</title>
-        <script type="text/javascript">
-            window.whiteScreenEndTime = +new Date();
-            window.pageId = "xfapp"
-        </script>
-        <script type="text/javascript" src="lib/app.bundle.js"></script>
-    </head>
-
-    <body>
-
-    </body>
-</html>
+import { getPerformanceData } from '@keelvin/performance';
 ```
+
+
+
+# API
+### getPerformanceData
+
+- Fn : 获取页面性能数据以供它用
+- Useage : 
+
+```
+// 异步调用
+getPerformanceData((data) => {
+    console.log(data);
+})
+
+```
+
