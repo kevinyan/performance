@@ -1,7 +1,7 @@
 {
   "name": "@keelvin/performance",
-  "version": "1.0.4",
-  "description": "keelvin 的包库",
+  "version": "1.0.5",
+  "description": "性能数据统计",
   "main": "dist/app.bundle.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

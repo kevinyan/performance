@@ -24,6 +24,13 @@ module.exports = {
         minimizer: [
             new UglifyJsPlugin({
                 sourceMap: true,
+                uglifyOptions: {
+                    compress: {
+                        warnings: false,
+                        drop_debugger: true,
+                        drop_console: true
+                    }
+                }
             })
         ]
     },
